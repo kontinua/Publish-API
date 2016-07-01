@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/google/go-github/github"
-)
+import "github.com/google/go-github/github"
 
 client := github.NewClient(nil)
 orgs, _, err := client.Organizations.List("kontinua", nil)

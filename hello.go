@@ -27,7 +27,8 @@ func main() {
 	// it can be safely placed inside a URL query
 	safePhone := url.QueryEscape(phone)
 
-	url := fmt.Sprintf("http://apilayer.net/api/validate?access_key=YOUR_ACCESS_KEY&number=%s", safePhone)
+	url := fmt.Sprintf("http://apilayer.net/api/validate?access_key=62dadad86098b1a0b0ec713df02c4c00&number=%s", safePhone)
+  log.Println(url)
 
 	// Build the request
 	req, err := http.NewRequest("GET", url, nil)
