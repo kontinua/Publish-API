@@ -16,3 +16,7 @@ func main() {
   // list all repositories for the authenticated user
   repos, _, err := client.Repositories.List("", nil)
 }
+
+func reverse() {
+	fmt.Println(stringutil.Reverse("!selpmaxe oG ,olleH"))
+}
