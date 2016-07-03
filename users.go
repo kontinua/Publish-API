@@ -5,6 +5,10 @@ import "github.com/google/go-github/github"
 client := github.NewClient(nil)
 orgs, _, err := client.Organizations.List("kontinua", nil)
 
+var bytesFlag = flag.Int("bytes", 48, "maximum parameter size in bytes")
+
+var sizeof = (&types.StdSizes{8, 8}).Sizeof // the sizeof function
+
 func main() {
   ts := oauth2.StaticTokenSource(
     &oauth2.Token{AccessToken: "... your access token ..."},
