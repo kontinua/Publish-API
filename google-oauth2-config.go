@@ -8,6 +8,11 @@ import (
     "appengine"
 )
 
+var Endpoint = oauth2.Endpoint{
+    AuthURL:  "https://www.facebook.com/dialog/oauth",
+    TokenURL: "https://graph.facebook.com/oauth/access_token",
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
     var c appengine.Context = appengine.NewContext(r)
     c.Infof("Logging a message with the old package")
